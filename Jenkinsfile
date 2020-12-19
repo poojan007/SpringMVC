@@ -3,7 +3,7 @@ node {
     def mvnHome
     stage('Preparation') {
         // Get some code from a GitHub repository
-        git branch: 'main', credentialsId: 'EcentricGithub', url: 'https://github.com/poojan007/SpringMVC.git'
+        git clone 'https://github.com/poojan007/SpringMVC.git'
         // initializing mvnHome variable with the current maven instance
 		mvnHome = tool 'MAVEN-3'
     }
